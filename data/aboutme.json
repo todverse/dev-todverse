@@ -72,7 +72,7 @@
         },
         {
             "name": "ToDo List",
-            "link": "https://todo-iwg8gmmvt-todverse.vercel.app",
+            "link": "https://to-do-psi-smoky.vercel.app/",
             "desc": "This app save your task in browser, and you always can return to him for complete.",
             "src": "todo.png",
             "alt": "ToDo application"
