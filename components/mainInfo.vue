@@ -1,7 +1,6 @@
 <script setup>
 import aboutme from '~/data/aboutme.json'
 import {onMounted} from 'vue'
-console.log(aboutme)
 onMounted(() => {
     let about = document.querySelectorAll("a[href='#about']")[0]
     let exp = document.querySelectorAll("a[href='#experience']")[0]
