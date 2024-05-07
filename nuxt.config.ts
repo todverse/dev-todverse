@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: [
     '@ant-design-vue/nuxt',
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    "@nuxt/image"
   ]
 })
