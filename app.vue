@@ -1,10 +1,12 @@
 <script setup>
-useSeoMeta({
-  title: 'Dev Todverse site',
+useServerSeoMeta({
+  title: 'todverse',
   ogTitle: 'todverse',
-  description: 'This site for developer Maxim.',
-  ogDescription: 'Maxim`s site',
-  ogImage: 'https://c948-31-29-195-201.ngrok-free.app/image'
+  description: 'This is the website of the developer Maxim. I make web applications. I develop both the server part and the client part.',
+  ogDescription: 'This is the website of the developer Maxim. I make web applications. I develop both the server part and the client part.',
+  ogImage: 'https://dev-todverse.vercel.app/imgg.png',
+  image: 'https://dev-todverse.vercel.app/imgg.png',
+  twitterCard: 'summary_large_image'
 })
 </script>
 
