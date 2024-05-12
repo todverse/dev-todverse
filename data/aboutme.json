@@ -71,6 +71,13 @@
             ]
         },
         {
+            "name": "OneClickDeal",
+            "link": "https://github.com/todverse/one_click_deal",
+            "desc": "App for create contacts and deals in Bitrix from one form. Using in one portal, but can be expanded for other.",
+            "src": "oneclickdeal.png",
+            "alt": "OneClickDeal application"
+        },
+        {
             "name": "ToDo List",
             "link": "https://to-do-psi-smoky.vercel.app/",
             "desc": "This app save your task in browser, and you always can return to him for complete.",
