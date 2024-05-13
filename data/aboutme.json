@@ -58,7 +58,8 @@
             "stack": [
                 "Nuxt.js",
                 "Vue.js"
-            ]
+            ],
+            "year": 2023
         },
         {
             "name": "MTS Link integrate",
@@ -68,35 +69,53 @@
             "alt": "MTS Link integrate",
             "stack": [
                 "PHP"
-            ]
+            ],
+            "year": 2024
         },
         {
             "name": "OneClickDeal",
             "link": "https://github.com/todverse/one_click_deal",
             "desc": "App for create contacts and deals in Bitrix from one form. Using in one portal, but can be expanded for other.",
             "src": "oneclickdeal.png",
-            "alt": "OneClickDeal application"
+            "alt": "OneClickDeal application",
+            "year": 2024,
+            "stack": [
+                "Nuxt.js",
+                "Vue.js"
+            ]
         },
         {
             "name": "ToDo List",
             "link": "https://to-do-psi-smoky.vercel.app/",
             "desc": "This app save your task in browser, and you always can return to him for complete.",
             "src": "todo.png",
-            "alt": "ToDo application"
+            "alt": "ToDo application",
+            "year": 2023,
+            "stack": [
+                "Vue.js"
+            ]
         },
         {
             "name": "Exchnge Rates",
             "link": "https://todverse.github.io/Exchange-Rates/",
             "desc": "App for convert currency. Very simple app, do it for fun and test CBR API.",
             "src": "exchange.png",
-            "alt": "Exchange Rates application"
+            "alt": "Exchange Rates application",
+            "year": 2023,
+            "stack": [
+                "JavaScript"
+            ]
         },
         {
             "name": "Cute app for valentines day",
             "link": "https://cutie-valentain.vercel.app/",
             "desc": "This is part of my valentines day gift. Looks cute that's why it's here.",
             "src": "valentain.png",
-            "alt": "Valentines Days application"
+            "alt": "Valentines Days application",
+            "year": 2024,
+            "stack": [
+                "Vue.js"
+            ]
         }
     ]
 }
