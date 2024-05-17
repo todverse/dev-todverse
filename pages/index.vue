@@ -13,7 +13,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class="group/spotlight relative">
+  <div id="maa" class="group/spotlight relative">
     <div 
         class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" 
         :style="{
@@ -28,3 +28,9 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style>
+html, body {
+  cursor: url('/cat.png') 5 5, auto;
+}
+</style>
