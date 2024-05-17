@@ -6,6 +6,8 @@ for(let i = 0; i < 3; i++) {
     if(aboutme.experience[i]) {
         exp.push(aboutme.experience[i])
     }
+}
+for(let i = 0; i < 4; i++) {
     if(aboutme.projects[i]) {
         proj.push(aboutme.projects[i])
     }
