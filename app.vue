@@ -20,3 +20,28 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+
+<style>
+.typing {
+  width: 11ch;
+  animation: typing 2s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid;
+  font-family: monospace;
+  font-size: 3em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+</style>

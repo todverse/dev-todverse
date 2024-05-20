@@ -21,11 +21,24 @@ const change_active = (e) => {
         proj.classList.add('active');
     }
 }
+const move = (event) => {
+    const card = event.target;
+
+    const relX = (event.offsetX + 1) / card.offsetWidth;
+    const relY = (event.offsetY + 1) / card.offsetHeight;
+    const rotY = `rotateY(${(relX - 0.5) * 60}deg)`;
+    const rotX = `rotateX(${(relY - 0.5) * -60}deg)`;
+    card.style.transform = `perspective(500px) ${rotY} ${rotX}`;
+}
+const leave = (event) => {
+    const card = event.target;
+    card.style.transform = `perspective(500px)`;
+}
 </script>
 <template>
     <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
         <div>
-            <h1 class="text-5xl font-bold">{{ aboutme.name }}</h1>
+            <h1 class="typing text-5xl font-bold">{{ aboutme.name }}</h1>
             <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">{{ aboutme.post }}</h2>
             <p class="mt-4 max-w-xs leading-normal">{{ aboutme.credo }}</p>
             <nav class="nav hidden lg:block">
