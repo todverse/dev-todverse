@@ -116,6 +116,17 @@
             "stack": [
                 "Vue.js"
             ]
+        },
+        {
+            "name": "Snake Game",
+            "link": "https://snake-v1.vercel.app/",
+            "desc": "Very simple application. Can be run on PC and phone. It's fun to take you back to your childhood.",
+            "src": "snake.png",
+            "alt": "Snake Game",
+            "year": 2024,
+            "stack": [
+                "Nuxt.js"
+            ]
         }
     ]
 }
