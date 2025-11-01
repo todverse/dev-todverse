@@ -62,6 +62,18 @@
             "year": 2023
         },
         {
+            "name": "HH2CRM",
+            "link": "https://nebo.me/projects/hh2crm/",
+            "desc": "Automatic uploading of responses from HH or Avito directly to Bitrix24, by setting up simple filters.",
+            "src": "hh2crm.png",
+            "alt": "HH2CRM application",
+            "stack": [
+                "Nuxt.js",
+                "Vue.js"
+            ],
+            "year": 2025
+        },
+        {
             "name": "MTS Link integrate",
             "link": "",
             "desc": "The app automatically uploads the YouTube video and Skillspace link. Frees up time for the employee, because there is no need to wait for the video to finish converting and be able to upload it to the channel.",
