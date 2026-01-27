@@ -1,5 +1,5 @@
 <template>
     <NuxtImg
-      src="/imgg.png"
+      src="/imgg.jpg"
     />
   </template>
