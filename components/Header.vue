@@ -6,7 +6,7 @@ const change_active = (e) => {
     let proj = document.querySelectorAll("a[href='#project']")[0]
     let hre = e.target.getAttribute('href')
     if(!hre) hre = ''
-    let inner = e.target.innerHTML.toLowerCase()
+    let inner = e.target.innerText.toLowerCase()
     if(inner.includes('about') || hre.includes('about')) {
         about.classList.add('active');
         exp.classList.remove('active');
@@ -21,68 +21,65 @@ const change_active = (e) => {
         proj.classList.add('active');
     }
 }
-const move = (event) => {
-    const card = event.target;
-
-    const relX = (event.offsetX + 1) / card.offsetWidth;
-    const relY = (event.offsetY + 1) / card.offsetHeight;
-    const rotY = `rotateY(${(relX - 0.5) * 60}deg)`;
-    const rotX = `rotateX(${(relY - 0.5) * -60}deg)`;
-    card.style.transform = `perspective(500px) ${rotY} ${rotX}`;
-}
-const leave = (event) => {
-    const card = event.target;
-    card.style.transform = `perspective(500px)`;
-}
 </script>
 <template>
     <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-        <div>
-            <h1 class="typing text-5xl font-bold">{{ aboutme.name }}</h1>
-            <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">{{ aboutme.post }}</h2>
-            <p class="mt-4 max-w-xs leading-normal">{{ aboutme.credo }}</p>
+        <div class="relative">
+            <!-- Terminal Header Decoration -->
+            <div class="hidden lg:flex items-center gap-2 mb-8 opacity-40">
+                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                <span class="text-[10px] font-mono ml-2 tracking-tighter uppercase">system_status: active</span>
+            </div>
+
+            <h1 class="typing text-4xl sm:text-5xl font-bold text-terminal-green glitch" :data-text="aboutme.name">{{ aboutme.name }}</h1>
+            <h2 class="mt-4 text-lg font-medium tracking-tight text-terminal-cyan sm:text-xl underline decoration-terminal-cyan/50 underline-offset-8">{{ aboutme.post }}</h2>
+            <p class="mt-6 max-w-xs leading-relaxed text-slate-200 border-l-2 border-terminal-green/40 pl-4 py-1">{{ aboutme.credo }}</p>
+            
             <nav class="nav hidden lg:block">
-                <ul class="mt-16 w-max">
-                    <li>
-                        <a class="group flex items-center py-3 active" href="#about" @click="change_active">
-                            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">ABOUT</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="group flex items-center py-3" href="#experience" @click="change_active">
-                            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">EXPERIENCE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="group flex items-center py-3" href="#project" @click="change_active">
-                            <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">PROJECTS</span>
+                <ul class="mt-16 w-max font-mono">
+                    <li v-for="item in ['ABOUT', 'EXPERIENCE', 'PROJECTS']" :key="item" class="mb-4">
+                        <a 
+                            :class="['group flex items-center py-2 transition-all hover:pl-4', item === 'ABOUT' ? 'active' : '']" 
+                            :href="'#' + (item === 'PROJECTS' ? 'project' : item.toLowerCase())" 
+                            @click="change_active"
+                        >
+                            <span class="nav-bracket mr-2 text-terminal-green opacity-0 group-hover:opacity-100 transition-opacity">[</span>
+                            <span class="nav-text text-sm font-bold tracking-[0.2em] text-slate-500 group-hover:text-terminal-green transition-colors uppercase">
+                                {{ item }}
+                            </span>
+                            <span class="nav-bracket ml-2 text-terminal-green opacity-0 group-hover:opacity-100 transition-opacity">]</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <ul class="ml-1 mt-8 flex items-center">
-            <li v-for="social in aboutme.social" class="mr-5 text-xs shrink-0">
-                <a :href="social.link" class="block hover:text-slate-200">
-                    <span class="sr-only">{{ social.name }}</span>
-                    <img class="h-6 w-6" :src="`/${social.svg}`">
-                </a>
-            </li>
-        </ul>
+        
+        <div class="mt-8">
+            <div class="text-[10px] font-mono text-slate-600 mb-4 uppercase tracking-widest">Connect_Via_Socket:</div>
+            <ul class="ml-1 flex items-center">
+                <li v-for="social in aboutme.social" :key="social.name" class="mr-6 text-xs shrink-0 group">
+                    <a :href="social.link" class="block relative transition-transform hover:-translate-y-1">
+                        <span class="sr-only">{{ social.name }}</span>
+                        <div class="absolute -inset-2 bg-terminal-green/0 group-hover:bg-terminal-green/10 rounded-lg blur-sm transition-all"></div>
+                        <img class="h-6 w-6 relative grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-110 transition-all filter drop-shadow-[0_0_8px_rgba(0,255,65,0)] group-hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.5)]" :src="`/${social.svg}`">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 </template>
 
 <style scoped>
-.active .nav-indicator {
-    width: 4rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(226 232 240/var(--tw-bg-opacity));
-}
 .active .nav-text {
-    --tw-text-opacity: 1;
-    color: rgb(226 232 240/var(--tw-text-opacity));
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+}
+.active .nav-bracket {
+    opacity: 1;
+}
+.nav-text {
+    transition: all 0.3s ease;
 }
 </style>
