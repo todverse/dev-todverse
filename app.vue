@@ -1,21 +1,32 @@
 <script setup>
-useServerSeoMeta({
-  title: 'todverse',
-  ogTitle: 'todverse',
-  description: 'This is the website of the developer Maxim. I make web applications. I develop both the server part and the client part.',
-  ogDescription: 'This is the website of the developer Maxim. I make web applications. I develop both the server part and the client part.',
-  ogImage: 'https://dev-todverse.vercel.app/imgg.jpg',
-  image: 'https://dev-todverse.vercel.app/imgg.jpg',
-  twitterCard: 'summary_large_image'
+import { useLanguage } from '~/composables/useLanguage'
+const { initLanguage, t, currentLang } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
 })
+
 useHead({
   htmlAttrs: {
-    class: 'bg-[#0a0a0a]'
+    class: 'bg-[#0a0a0a]',
+    lang: currentLang
   },
   bodyAttrs: {
     class: 'bg-[#0a0a0a] leading-relaxed text-slate-200 antialiased selection:bg-terminal-green selection:text-black font-mono relative overflow-x-hidden',
   },
 });
+
+watchEffect(() => {
+  useServerSeoMeta({
+    title: t('seo.title'),
+    ogTitle: t('seo.title'),
+    description: t('seo.description'),
+    ogDescription: t('seo.description'),
+    ogImage: 'https://dev-todverse.vercel.app/imgg.jpg',
+    image: 'https://dev-todverse.vercel.app/imgg.jpg',
+    twitterCard: 'summary_large_image'
+  })
+})
 </script>
 
 <template>
@@ -47,8 +58,6 @@ useHead({
 }
 
 .typing {
-  width: 11ch;
-  animation: typing 2.5s steps(11), blink .8s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #00ff41;

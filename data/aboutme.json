@@ -1,143 +1,288 @@
 {
-    "name": "Maxim Kupin",
-    "post": "Fullstack web developer",
-    "credo": "I create engaging, and accessible digital experiences.",
-    "aboutme_paragraphs": [
-        "My name is Maxim and I am a web application developer. I had the opportunity to create interesting applications for companies, individuals and for myself.",
-        "Currently I am developing applications for IT NEBO. I integrate and automate the work of companies in CRM Bitrix."
-    ],
-    "resume_link": "https://balakovo.hh.ru/resume/109c96ecff0961d07f0039ed1f50436c556273",
-    "social": [
-        {
-            "name": "GitHub",
-            "link": "https://github.com/todverse",
-            "svg": "github.svg"
-        },
-        {
-            "name": "Telegramm",
-            "link": "https://t.me//todverse",
-            "svg": "telegram.svg"
-        }
-    ],
-    "experience": [
-        {
-            "time": "2023 - Present",
-            "post": "Fullstack developer",
-            "company": "IT NEBO",
-            "link": "https://nebo.me/",
-            "desc": "I integrate and automate the work of companies in CRM Bitrix.",
-            "stack": [
-                "Node.js",
-                "Nuxt.js",
-                "Vue.js",
-                "PHP"
-            ]
-        },
-        {
-            "time": "2021 - 2022",
-            "post": "Student",
-            "company": "",
-            "link": "",
-            "desc": "Studied web development. I developed pet-projects. Learned to write code and develop software that works both on the client side and on the server side.",
-            "stack": [
-                "Node.js",
-                "Nuxt.js",
-                "Vue.js",
-                "PHP"
-            ]
-        }
-    ],
-    "projects": [
-        {
-            "name": "Dialog AI",
-            "link": "https://nebo.me/projects/obshhenie-ai24/",
-            "desc": "Application for automating communication with clients. Bots with connected neural networks can advise clients and sort incoming requests, freeing up employee time.",
-            "src": "dialog.png",
-            "alt": "Dialog AI application",
-            "stack": [
-                "Nuxt.js",
-                "Vue.js"
-            ],
-            "year": 2023
-        },
-        {
-            "name": "HH2CRM",
-            "link": "https://nebo.me/projects/hh2crm/",
-            "desc": "Automatic uploading of responses from HH or Avito directly to Bitrix24, by setting up simple filters.",
-            "src": "hh2crm.png",
-            "alt": "HH2CRM application",
-            "stack": [
-                "Nuxt.js",
-                "Vue.js"
-            ],
-            "year": 2025
-        },
-        {
-            "name": "MTS Link integrate",
-            "link": "",
-            "desc": "The app automatically uploads the YouTube video and Skillspace link. Frees up time for the employee, because there is no need to wait for the video to finish converting and be able to upload it to the channel.",
-            "src": "",
-            "alt": "MTS Link integrate",
-            "stack": [
-                "PHP"
-            ],
-            "year": 2024
-        },
-        {
-            "name": "OneClickDeal",
-            "link": "https://github.com/todverse/one_click_deal",
-            "desc": "App for create contacts and deals in Bitrix from one form. Using in one portal, but can be expanded for other.",
-            "src": "oneclickdeal.png",
-            "alt": "OneClickDeal application",
-            "year": 2024,
-            "stack": [
-                "Nuxt.js",
-                "Vue.js"
-            ]
-        },
-        {
-            "name": "ToDo List",
-            "link": "https://to-do-psi-smoky.vercel.app/",
-            "desc": "This app save your task in browser, and you always can return to him for complete.",
-            "src": "todo.png",
-            "alt": "ToDo application",
-            "year": 2023,
-            "stack": [
-                "Vue.js"
-            ]
-        },
-        {
-            "name": "Exchnge Rates",
-            "link": "https://todverse.github.io/Exchange-Rates/",
-            "desc": "App for convert currency. Very simple app, do it for fun and test CBR API.",
-            "src": "exchange.png",
-            "alt": "Exchange Rates application",
-            "year": 2023,
-            "stack": [
-                "JavaScript"
-            ]
-        },
-        {
-            "name": "Cute app for valentines day",
-            "link": "https://cutie-valentain.vercel.app/",
-            "desc": "This is part of my valentines day gift. Looks cute that's why it's here.",
-            "src": "valentain.png",
-            "alt": "Valentines Days application",
-            "year": 2024,
-            "stack": [
-                "Vue.js"
-            ]
-        },
-        {
-            "name": "Snake Game",
-            "link": "https://snake-v1.vercel.app/",
-            "desc": "Very simple application. Can be run on PC and phone. It's fun to take you back to your childhood.",
-            "src": "snake.png",
-            "alt": "Snake Game",
-            "year": 2024,
-            "stack": [
-                "Nuxt.js"
-            ]
-        }
-    ]
+    "en": {
+        "name": "Maxim Kupin",
+        "post": "Fullstack web developer",
+        "credo": "I create engaging, and accessible digital experiences.",
+        "aboutme_paragraphs": [
+            "My name is Maxim and I am a web application developer. I had the opportunity to create interesting applications for companies, individuals and for myself.",
+            "Currently I am developing applications for IT NEBO. I integrate and automate the work of companies in CRM Bitrix."
+        ],
+        "resume_link": "https://balakovo.hh.ru/resume/109c96ecff0961d07f0039ed1f50436c556273",
+        "social": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/todverse",
+                "svg": "github.svg"
+            },
+            {
+                "name": "Telegram",
+                "link": "https://t.me/todverse",
+                "svg": "telegram.svg"
+            }
+        ],
+        "experience": [
+            {
+                "time": "2023 - Present",
+                "post": "Fullstack developer",
+                "company": "IT NEBO",
+                "link": "https://nebo.me/",
+                "desc": "I integrate and automate the work of companies in CRM Bitrix.",
+                "stack": [
+                    "Node.js",
+                    "Nuxt.js",
+                    "Vue.js",
+                    "PHP"
+                ]
+            },
+            {
+                "time": "2021 - 2022",
+                "post": "Student",
+                "company": "",
+                "link": "",
+                "desc": "Studied web development. I developed pet-projects. Learned to write code and develop software that works both on the client side and on the server side.",
+                "stack": [
+                    "Node.js",
+                    "Nuxt.js",
+                    "Vue.js",
+                    "PHP"
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "name": "Dialog AI",
+                "link": "https://nebo.me/projects/obshhenie-ai24/",
+                "desc": "Application for automating communication with clients. Bots with connected neural networks can advise clients and sort incoming requests, freeing up employee time.",
+                "src": "dialog.png",
+                "alt": "Dialog AI application",
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ],
+                "year": 2023
+            },
+            {
+                "name": "HH2CRM",
+                "link": "https://nebo.me/projects/hh2crm/",
+                "desc": "Automatic uploading of responses from HH or Avito directly to Bitrix24, by setting up simple filters.",
+                "src": "hh2crm.png",
+                "alt": "HH2CRM application",
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ],
+                "year": 2025
+            },
+            {
+                "name": "MTS Link integrate",
+                "link": "",
+                "desc": "The app automatically uploads the YouTube video and Skillspace link. Frees up time for the employee, because there is no need to wait for the video to finish converting and be able to upload it to the channel.",
+                "src": "",
+                "alt": "MTS Link integrate",
+                "stack": [
+                    "PHP"
+                ],
+                "year": 2024
+            },
+            {
+                "name": "OneClickDeal",
+                "link": "https://github.com/todverse/one_click_deal",
+                "desc": "App for create contacts and deals in Bitrix from one form. Using in one portal, but can be expanded for other.",
+                "src": "oneclickdeal.png",
+                "alt": "OneClickDeal application",
+                "year": 2024,
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "ToDo List",
+                "link": "https://to-do-psi-smoky.vercel.app/",
+                "desc": "This app save your task in browser, and you always can return to him for complete.",
+                "src": "todo.png",
+                "alt": "ToDo application",
+                "year": 2023,
+                "stack": [
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "Exchnge Rates",
+                "link": "https://todverse.github.io/Exchange-Rates/",
+                "desc": "App for convert currency. Very simple app, do it for fun and test CBR API.",
+                "src": "exchange.png",
+                "alt": "Exchange Rates application",
+                "year": 2023,
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            {
+                "name": "Cute app for valentines day",
+                "link": "https://cutie-valentain.vercel.app/",
+                "desc": "This is part of my valentines day gift. Looks cute that's why it's here.",
+                "src": "valentain.png",
+                "alt": "Valentines Days application",
+                "year": 2024,
+                "stack": [
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "Snake Game",
+                "link": "https://snake-v1.vercel.app/",
+                "desc": "Very simple application. Can be run on PC and phone. It's fun to take you back to your childhood.",
+                "src": "snake.png",
+                "alt": "Snake Game",
+                "year": 2024,
+                "stack": [
+                    "Nuxt.js"
+                ]
+            }
+        ]
+    },
+    "ru": {
+        "name": "Максим Купин",
+        "post": "Fullstack веб-разработчик",
+        "credo": "Я создаю увлекательные и доступные цифровые решения.",
+        "aboutme_paragraphs": [
+            "Меня зовут Максим, я занимаюсь разработкой веб-приложений. У меня есть опыт создания интересных проектов для компаний, частных клиентов и в рамках собственных инициатив.",
+            "В настоящее время разрабатываю приложения для IT NEBO, где занимаюсь интеграцией и автоматизацией бизнес-процессов на платформе CRM Битрикс24."
+        ],
+        "resume_link": "https://balakovo.hh.ru/resume/109c96ecff0961d07f0039ed1f50436c556273",
+        "social": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/todverse",
+                "svg": "github.svg"
+            },
+            {
+                "name": "Telegram",
+                "link": "https://t.me/todverse",
+                "svg": "telegram.svg"
+            }
+        ],
+        "experience": [
+            {
+                "time": "2023 - Настоящее время",
+                "post": "Fullstack разработчик",
+                "company": "IT NEBO",
+                "link": "https://nebo.me/",
+                "desc": "Разработка и интеграция решений для автоматизации бизнес-процессов в CRM Битрикс24.",
+                "stack": [
+                    "Node.js",
+                    "Nuxt.js",
+                    "Vue.js",
+                    "PHP"
+                ]
+            },
+            {
+                "time": "2021 - 2022",
+                "post": "Самостоятельное обучение",
+                "company": "",
+                "link": "",
+                "desc": "Активно изучал веб-разработку, создавал пет-проекты, осваивал fullstack-разработку (клиентскую и серверную части).",
+                "stack": [
+                    "Node.js",
+                    "Nuxt.js",
+                    "Vue.js",
+                    "PHP"
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "name": "Dialog AI",
+                "link": "https://nebo.me/projects/obshhenie-ai24/",
+                "desc": "Приложение для автоматизации общения с клиентами. Боты с подключенными нейросетями могут консультировать клиентов и сортировать входящие запросы, освобождая время сотрудников.",
+                "src": "dialog.png",
+                "alt": "Dialog AI application",
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ],
+                "year": 2023
+            },
+            {
+                "name": "HH2CRM",
+                "link": "https://nebo.me/projects/hh2crm/",
+                "desc": "Автоматическая выгрузка откликов с HH или Avito прямо в Битрикс24 путем настройки простых фильтров.",
+                "src": "hh2crm.png",
+                "alt": "HH2CRM application",
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ],
+                "year": 2025
+            },
+            {
+                "name": "MTS Link integrate",
+                "link": "",
+                "desc": "Приложение автоматически загружает видео на YouTube и ссылку в Skillspace. Освобождает время сотрудника, так как нет необходимости ждать окончания конвертации видео для загрузки на канал.",
+                "src": "",
+                "alt": "MTS Link integrate",
+                "stack": [
+                    "PHP"
+                ],
+                "year": 2024
+            },
+            {
+                "name": "OneClickDeal",
+                "link": "https://github.com/todverse/one_click_deal",
+                "desc": "Приложение для создания контактов и сделок в Bitrix24 из одной формы. Реализовано для одного портала с возможностью масштабирования.",
+                "src": "oneclickdeal.png",
+                "alt": "OneClickDeal application",
+                "year": 2024,
+                "stack": [
+                    "Nuxt.js",
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "ToDo List",
+                "link": "https://to-do-psi-smoky.vercel.app/",
+                "desc": "Это приложение сохраняет ваши задачи в браузере, и вы всегда можете вернуться к ним для завершения.",
+                "src": "todo.png",
+                "alt": "ToDo application",
+                "year": 2023,
+                "stack": [
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "Exchnge Rates",
+                "link": "https://todverse.github.io/Exchange-Rates/",
+                "desc": "Конвертер валют. Простое приложение, созданное для экспериментов с API ЦБ РФ.",
+                "src": "exchange.png",
+                "alt": "Exchange Rates application",
+                "year": 2023,
+                "stack": [
+                    "JavaScript"
+                ]
+            },
+            {
+                "name": "Cute app for valentines day",
+                "link": "https://cutie-valentain.vercel.app/",
+                "desc": "Это часть моего подарка на День святого Валентина. Выглядит мило, поэтому оно здесь.",
+                "src": "valentain.png",
+                "alt": "Valentines Days application",
+                "year": 2024,
+                "stack": [
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "Snake Game",
+                "link": "https://snake-v1.vercel.app/",
+                "desc": "Очень простое приложение. Можно запустить на ПК и телефоне. Весело возвращает в детство.",
+                "src": "snake.png",
+                "alt": "Snake Game",
+                "year": 2024,
+                "stack": [
+                    "Nuxt.js"
+                ]
+            }
+        ]
+    }
 }

@@ -1,7 +1,9 @@
 <script setup>
-import aboutme from '~/data/aboutme.json'
-let exp = aboutme.experience.slice(0, 3)
-let proj = aboutme.projects.slice(0, 4)
+import { useLanguage } from '~/composables/useLanguage'
+const { t, data } = useLanguage()
+
+const exp = computed(() => data.value.experience.slice(0, 3))
+const proj = computed(() => data.value.projects.slice(0, 4))
 
 import {onMounted} from 'vue'
 onMounted(() => {
@@ -36,10 +38,10 @@ onMounted(() => {
         <!-- About Section -->
         <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-terminal-bg/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" data-text="About">About</h2>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" :data-text="t('nav.about')">{{ t('nav.about') }}</h2>
             </div>
             <div class="space-y-4 text-slate-200 leading-relaxed font-mono text-sm sm:text-base">
-                <p v-for="(text, index) in aboutme.aboutme_paragraphs" :key="index" class="relative pl-6">
+                <p v-for="(text, index) in data.aboutme_paragraphs" :key="index" class="relative pl-6">
                     <span class="absolute left-0 text-terminal-green/50 italic">></span>
                     {{ text }}
                 </p>
@@ -49,7 +51,7 @@ onMounted(() => {
         <!-- Experience Section -->
         <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a0a0a]/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" data-text="Experience">Experience</h2>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" :data-text="t('nav.experience')">{{ t('nav.experience') }}</h2>
             </div>
             
             <div class="group/list">
@@ -84,8 +86,8 @@ onMounted(() => {
             </div>
 
             <div class="mt-8">
-                <a v-if="aboutme.resume_link" :href="aboutme.resume_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:underline">
-                    <span class="text-terminal-green/70">cat</span> <span class="text-slate-200">resume.pdf</span>
+                <a v-if="data.resume_link" :href="data.resume_link" target="_blank" class="inline-flex items-center gap-2 text-sm font-mono text-terminal-green hover:underline">
+                    <span class="text-terminal-green/70">{{ t('ui.catResume') }}</span> <span class="text-slate-200">{{ t('ui.resumeFile') }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-3 w-3"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
@@ -94,7 +96,7 @@ onMounted(() => {
         <!-- Projects Section -->
         <section id="project" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-terminal-bg/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" data-text="Projects">Projects</h2>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-terminal-green lg:sr-only glitch" :data-text="t('nav.projects')">{{ t('nav.projects') }}</h2>
             </div>
 
             <div class="grid gap-8">
@@ -108,7 +110,7 @@ onMounted(() => {
                                 <img :src="'/' + project.src" :alt="project.alt" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500 scale-105 group-hover:scale-100">
                             </div>
                             <div v-else class="aspect-video bg-terminal-green/10 border border-dashed border-terminal-green/30 flex items-center justify-center">
-                                <span class="text-[10px] font-mono opacity-40 uppercase">No_Preview</span>
+                                <span class="text-[10px] font-mono opacity-40 uppercase">{{ t('ui.noPreview') }}</span>
                             </div>
                         </div>
                         <div class="sm:w-2/2">
@@ -133,7 +135,7 @@ onMounted(() => {
 
             <div class="mt-12 text-center">
                 <a href="/projects" class="group inline-flex items-center gap-2 p-3 border-2 border-terminal-green/30 hover:border-terminal-green hover:bg-terminal-green/10 transition-all text-sm font-mono text-terminal-green shadow-neon-green/10">
-                    <span class="group-hover:animate-pulse">RUN</span> --all-projects
+                    <span class="group-hover:animate-pulse">{{ t('ui.runAll') }}</span> {{ t('ui.allProjectsLink') }}
                 </a>
             </div>
         </section>
