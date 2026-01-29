@@ -22,8 +22,8 @@ watchEffect(() => {
     ogTitle: t('seo.title'),
     description: t('seo.description'),
     ogDescription: t('seo.description'),
-    ogImage: 'https://dev-todverse.vercel.app/imgg.jpg',
-    image: 'https://dev-todverse.vercel.app/imgg.jpg',
+    ogImage: 'https://dev-todverse.vercel.app/imgg.png',
+    image: 'https://dev-todverse.vercel.app/imgg.png',
     twitterCard: 'summary_large_image'
   })
 })
