@@ -37,8 +37,8 @@ const translations = {
         ui: {
             catResume: 'cat',
             resumeFile: 'резюме.pdf',
-            status: 'статус_системы: активен',
-            socket: 'Связаться_через_сокет:',
+            status: 'system_status: active',
+            socket: 'Connect_Via_Socket:',
             runAll: 'ЗАПУСТИТЬ',
             allProjectsLink: '--все-проекты',
             noPreview: 'Нет_превью',
